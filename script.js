@@ -41,8 +41,19 @@
 // const appleOrangeJuice = fruitProcessor(2, 4);
 // console.log(appleOrangeJuice);
 
+
+// function declaration
 function calcAge1(birthYeah) {
     return 2021 - birthYeah;
 }
+const age1 = calcAge1(1991);
 
-console.log(calcAge1(1991))
+
+// function expression you have to store function in the variable // function without the name call anonymous function
+const calcAge2 = function (birthYeah) {
+    return 2021 - birthYeah;
+}
+const age2 = calcAge2(1991);
+
+
+console.log(age1, age2);
