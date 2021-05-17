@@ -1,6 +1,7 @@
 const friend1 = 'Alice';
 const friend2 = 'Taylor';
 const friend3 = 'Smith';
+const friend4 = 'Kesinee';
 
 // const friends = ['Alice', 'Taylor', 'Peter'];
 // console.log(friends);
