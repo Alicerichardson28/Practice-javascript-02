@@ -59,3 +59,31 @@ console.log(alice['last' + nameKey])
 
 console.log(alice.firstName + " " + "has" + " " + alice.friends.length + " " + "friends, and her best friend is called" + " " + alice.friends[1])
 console.log(`${alice.firstName} has ${alice.friends.length} friends, and her best friend is called ${alice.friends[1]}`)
+
+const peter = {
+    firstName: 'Peter',
+    lastName: 'Smith',
+    birthYear: 1982,
+    job: 'Developer',
+    friends: ['Alice', 'John', 'Steven'],
+    hasDriversLicense: true,
+
+    // calcAge: function(birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // we can use this object to access peter object
+    // this keyword will = who calling the calcAge method
+    calcAge: function() {
+        console.log(this)
+        return 2037 - this.birthYear;
+    }
+};
+
+    console.log(peter.calcAge());
+    // console.log(peter["calcAge"](1982));
+
+    
+    // const calcAge = function(birthYeah) {
+    //     return 2037 - birthYeah
+    // }
