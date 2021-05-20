@@ -68,22 +68,45 @@ const peter = {
     friends: ['Alice', 'John', 'Steven'],
     hasDriversLicense: true,
 
+    // calcAge: function() {
+    //     // this.age = 2037 - this.birthYear;
+    //     return 2037 - this.birthYear;
+    // }
+    
+    calcAge: function () {
+        // console.log(this)
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+    // create own methods on our own objects
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license `
+    }
+
+    
     // calcAge: function(birthYear) {
     //     return 2037 - birthYear;
     // }
 
     // we can use this object to access peter object
     // this keyword will = who calling the calcAge method
-    calcAge: function() {
-        console.log(this)
-        return 2037 - this.birthYear;
-    }
-};
 
-    console.log(peter.calcAge());
+    // calcAge: function() {
+    //     console.log(this)
+    //     return 2037 - this.birthYear;
+    // }
+
+};
+    peter.calcAge();
+    console.log(peter.age);
+    console.log(peter.getSummary());
+
+
+    // console.log(peter.calcAge());
     // console.log(peter["calcAge"](1982));
 
     
     // const calcAge = function(birthYeah) {
-    //     return 2037 - birthYeah
+    //     return 2037 - birthYear
     // }
+
