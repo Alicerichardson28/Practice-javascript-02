@@ -22,6 +22,8 @@ const alice= [
     true
 ];
 
+const types = [];
+
 // i start from 0 because the array base of 0 is first element
 
 // console.log(aliceArray[0])
@@ -31,5 +33,36 @@ const alice= [
 // console.log(aliceArray[4])
 
 for(let i = 0; i < alice.length; i++){
+    // Reading from alice array
+    console.log(alice[i], typeof alice[i]);
+
+    // Filling types array
+    // types[i] = typeof alice[i]; //types[0] = typeof alice[0]
+    types.push(typeof alice[i])
+}
+
+console.log(types);
+
+const years = [1990, 2007, 1969, 2020];
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log('---Only string ---')
+for(let i = 0; i < alice.length; i++){
+    if(typeof alice[i] !== 'string') continue;
+    // this console.log will not be read if the condition true and will continue to the next iteration
+    console.log(alice[i], typeof alice[i]);
+}
+
+console.log('---Break with Number ---')
+for(let i = 0; i < alice.length; i++){
+    if(typeof alice[i] === 'number') break;
+    // this console.log will not be read if the condition true and will continue to the next iteration
     console.log(alice[i], typeof alice[i]);
 }
