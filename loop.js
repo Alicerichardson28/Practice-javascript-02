@@ -66,3 +66,30 @@ for(let i = 0; i < alice.length; i++){
     // this console.log will not be read if the condition true and will continue to the next iteration
     console.log(alice[i], typeof alice[i]);
 }
+
+// looping array backwards
+const taylor= [
+    'Taylor',
+    'Richardson',
+    2021 - 1997,
+    'Pilot',
+    ['Peter', 'Steven', 'Michael'],
+    true,
+    true
+];
+
+// array index start with 0 but actual length start with 1 
+for(let i = taylor.length - 1; i >= 0; i--){
+    console.log(i,taylor[i])
+}
+
+// create loop inside loop
+// otter loop
+for(let exercise = 1; exercise < 4; exercise++){
+    console.log(`-----Starting exercise ${exercise}`)
+
+    // inner loop
+    for(let rep = 1; rep < 6; rep++){
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`)
+    }
+};
