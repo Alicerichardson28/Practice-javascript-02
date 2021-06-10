@@ -93,3 +93,31 @@ for(let exercise = 1; exercise < 4; exercise++){
         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`)
     }
 };
+
+
+// console.log('----- for loop -------')
+// for(let rep = 1; rep <= 10; rep++){
+//             console.log(`Lifting weights repetition ${rep}`);
+//         }
+    
+console.log('----- While loop -------')
+ // While loop
+
+let rep = 1;
+while(rep <=10) {
+    console.log(`While: Lifting weights repetition ${rep}`);
+    rep++;
+ };
+
+// keep rolling dice 
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+//when dice is 6 the loop will never start
+//if you don't need a counter you can yse while loop
+    while(dice !== 6) {
+        console.log(`You rolled a ${dice}`) //infinity loop
+        dice = Math.trunc(Math.random() * 6) + 1;
+        if(dice === 6) console.log('Loop is about to end...');
+    }
+
+    
